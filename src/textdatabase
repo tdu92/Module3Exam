@@ -1,0 +1,16 @@
+create database employee;
+use employee;
+create table employee(
+ID int not null primary key auto_increment,
+    Name varchar(30) not null,
+Email varchar(30) not null,
+    Address varchar(40) not null,
+    PhoneNumber varchar(10) not null,
+    Salary double not null,
+    IdDepartment int,
+    foreign key (IdDepartment) references Department(ID)
+);
+create table department(
+    ID int not null primary key,
+    Name varchar(30) not null
+)
